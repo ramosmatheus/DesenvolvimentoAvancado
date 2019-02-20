@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int v[100];
 
@@ -7,6 +9,16 @@ int main ()
   int *p;
 
   char nome[10];
+  char *n;
+
+  n = nome;
+  *n = 'M';
+  n++;
+  *n = 'A';
+  n++;
+  *n = 'T';
+  n++;
+  *n = 0;
 
   nome[0] = 'M';
   nome[1] = 'A';
@@ -16,6 +28,16 @@ int main ()
   nome[2] = 'U';
   nome[2] = 'S';
   nome[3] = 0;
+
+  printf("%s\n", nome);
+
+  n = nome +1;
+  strcpy(nome, "maria");
+  printf("%s\n", nome );
+  printf("%s\n", n);
+
+  scanf("%i",&c );
+  printf("%s\n", nome );
 
   v[0] = 22;
   *v = 22;
