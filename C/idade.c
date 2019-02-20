@@ -7,18 +7,22 @@
 int main()
 {
   int idade;
+  int *pIdade;
   char nome[30];
+
+  pIdade = &idade;
 
   printf("Qual é seu nome: ");
   scanf("%s", nome);
   printf("Ola %s.\n", nome);
 
   printf("Qual a sua idade: "); // Solicita uma idade
-  scanf("%i", &idade ); // Captura oq o usuario digita
-  if (idade < 17) { // compara para ver se a idade é menor que 17
-    printf("Voçê é de menor\n"); // responde se o cliente é de maior ou de menor
+  scanf("%d", pIdade ); // Captura oq o usuario digita
+  
+  if (*pIdade < 17) { // compara para ver se a idade é menor que 17
+    printf("Voçê tem menos de 18 anos\n"); // responde se o cliente é de maior ou de menor
   }else{
-    printf("Você é de maior\n");
+    printf("Você tem mais de 18 anos\n");
   }
 
   return 0;
