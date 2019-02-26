@@ -6,23 +6,20 @@ double div(int a, int b)
   return (double)a / (double)b;
 }
 
-double convertToFahrenheit(double a){
+double celcius2Fahrenheit(double a){
 
-  return (((double)a*9)/5) + 32;
+  return ((a*9)/5) + 32;
 }
 
 
 int main()
 {
-  int a;
-  int *pA;
-
-  pA = &a;
+  double a;
 
   printf("Quantos º: ");
-  scanf("%d", pA );
+  scanf("%lf", &a );
 
-  printf("%.3f\n", convertToFahrenheit(a) );
+  printf("%.3lf\n", celcius2Fahrenheit(a) );
 
   printf("a/b = %.3f\n", div(5,2));
   return 0;
