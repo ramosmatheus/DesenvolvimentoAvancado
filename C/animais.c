@@ -19,6 +19,10 @@ int main ()
   totoh.nome = "Spike";
   totoh.idade = 45;
 
+  cout << toto.nome << endl;
+  cout << xaninho->nome << endl;
+
+
 
 
   return 0;
