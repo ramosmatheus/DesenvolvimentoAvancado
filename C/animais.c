@@ -5,7 +5,7 @@ struct bicho_t {
   string nome;
   int idade;
 
-
+s
 
 };
 
